@@ -1,0 +1,5 @@
+one possible algo to solve this question how be to come from both the sides of the stirng till we hit the first 
+letter that does not match and check if the one on the first end is smaller than the one on the other end... 
+if it is... then print 'yes' else swap it if it is within the given range of permissible swaps
+
+so in theory every word can be made universal unless it symmetrical or the given number of swaps is symmetrical
