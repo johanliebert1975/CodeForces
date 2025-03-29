@@ -1,3 +1,11 @@
 (x+k)+(y+k)=(x+k)⊕(y+k)
 
-bitwise XOR serves as addition without carry which means two numbers added will be equal iff they dont have 1 in a common bit position
+bitwise XOR serves as addition without carry which means two numbers added will be equal 
+iff they dont have 1 in a common bit position
+
+real solution from code forces:
+    they were able to show that (x+k)+(y+k)=(x+k)⊕(y+k) is equivalent
+    to the condition (x+k)&(y+k) = 0 where & is the bitwise and operator
+
+    and there will exist no such k if x = y;
+    else there must exit atleast one k such that: k = 2^n - max(x,y) where n is a sufficiently large number

@@ -1,20 +1,9 @@
 import sys
 
 def find_k(x, y):
-    xor_val = x ^ y
-    sum_val = x + y
-    
-    # Check if the required condition is possible
-    if (xor_val - sum_val) % 2 != 0:
+    if x==y:
         return -1
-    
-    k = (xor_val - sum_val) // 2
-    
-    # Verify that (x + k) & (y + k) == 0
-    if k >= 0 and ((x + k) & (y + k)) == 0:
-        return k
-    else:
-        return -1
+    else: return 2**48 - max(x,y)
 
 # Read input and process test cases
 def main():
