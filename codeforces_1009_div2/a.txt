@@ -1,0 +1,3 @@
+a quadrilateral is a square iff:
+    one pair of adjacent sides are equal
+    the diagonal bisect each other at right angles

@@ -1,0 +1,21 @@
+the idea behind the algorithm is that first we check whether m is odd or even:
+    even is the easier case so we start with it first:
+    let the number of students me k and we calculate ceil(m/k) and assign it to variable m0 
+    and set bench size = 1
+    then we check if n*ceil(m/k)>= k or not:
+        if it is true: then we return the bench size
+        else: then increment m0 by 1 and the bench size by 1 if the bench size != m-1
+        if m0 + 1 = m then we return m 
+        and if not... we again check if n*m0 >= k and if true we return the bench size  else we repeat again.
+
+    now if m is odd:
+        we again calculate ceil(m/k) and assign it to variable m0 
+        and set bench size = 1
+        then we check if n*ceil(m/k)>= k or not:
+            if it is true: then we return the bench size
+            else: then increment m0 by 1 and but this time we increment the bench by size by 2 no now...
+            the bench size is 3 and again check if n*m0 >= k if true we return the bench size else we continue
+            we increment m0 by 1 but this time... we dont increment the bench size 
+            one way to doing this iteratively is to check the original odd or even of ceil(m/k) and increase bench by 2 if it 
+            atains its original parity back... and if m0 +1 = m is required we return m
+    

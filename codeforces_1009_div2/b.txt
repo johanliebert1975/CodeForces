@@ -1,0 +1,6 @@
+we sort the given array array first and then create an index variable initialized to zero
+if the length of the array is N then there will be N-1 steps in the procedure as the length of the array 
+is decreasing by 1 in each step... 
+
+also append arr[index] + arr[index + 1] to array
+and then increase index by 2

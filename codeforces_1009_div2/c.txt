@@ -1,0 +1,10 @@
+this question will require a brute force approach requiring a test of all the values in the range 1 to x (x exclusive)
+
+now if x+y == x xor y iff x&y == 0
+else x+y > x xor y  so this is the first condition
+
+x+ (x xor y) will be greater than y in all cases 
+
+and in the fist case where y + (x xor y) > x will be our requried ans
+
+this will be a correct algo but it is faced by TLE

@@ -1,0 +1,10 @@
+the idea for the interesting ratio is that
+f = lcm/gcd
+where f is prime hence lcm = gcd * p where p is a prime
+also a*b = lcm * gcd 
+hence a* b = p * gcd^2
+
+now the gcd is the greatest factor which divides both a and b hence a = gcd and b = p*gcd as (a<b)
+hence b = p*a 
+
+and we take different values of a multiply it with prime numbers and generate b until the given limit is reached
