@@ -1,0 +1,23 @@
+this is a more or less straight fwd question but we do need to solve it efficiently.
+we iterate through the array a and if we encounter an odd number we skip it or set it to zero...
+    else if the number is even then... we determine what is maximum power of 2 in that number
+    then check build that list for all the numbers in a...
+
+    also we sort the array b so we can perform a binary search if that is necessary... 
+    i dont think a binary search would be necessary here... a better thing to do here is
+    find the inital max of the list here and keep a track of its index... since b is already sorted
+    we decrease the index if the current keep is greater than ( if yes then decrease the index again),
+    equal to (if yes then perform the operation) or less than (if yes... then the number doesnt exist in the list)
+
+    now we start with the max val in the list we built... and check if that number is present 
+    in the array b if it is present then:
+        decrease all the max numbers in our array... where they are present by one and 
+        increment... the numbers in a in that index by 2^(max-1)
+
+    if it is not present in b:
+        then decrease all those numbers by 1 and move on:
+    
+    again figure out the max and continue searching and decreasing and increasing a ( if possible) until
+    all the numbers in the list we built are zeroed out
+
+this algorithm is wrong...

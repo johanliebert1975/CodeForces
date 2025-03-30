@@ -1,0 +1,7 @@
+the main idea behind this question is that whether the numbers in the range 2^m - 2^(m-1) form an increasing sequence or not... for 
+all possible n such that 2^m <= n...
+this is because we can only effectively decrease the numbers in that range... without affecting their order.... so the net effect is the one 
+mentioned above...
+
+also if for some min possible value of m such that 2^m > n then we set the upper bound of the check to n and check whether the numbers in the range
+n,2^(m-1) are in an increasing sequence or not
