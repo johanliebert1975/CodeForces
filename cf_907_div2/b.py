@@ -1,38 +1,16 @@
 import sys
 
-def get_exponent(m):
-    exponent = 0
-    while m % 2 == 0:
-        exponent += 1
-        m //= 2
-    return exponent
-
-def modify_arr(a, b):
-    exp_arr = [get_exponent(a[i]) for i in range(len(a))]
-
-    max_val = max(exp_arr)
-    index = 0
-
-    # Move index to the first usable value in b
-    while index < len(b) and b[index] > max_val:
-        index += 1
-
-    while not all(x == 0 for x in exp_arr):
-        if index < 0:  # Prevent infinite loop
-            break
-        
-        if index < len(b) and b[index] > max_val:
-            index -= 1
-            continue
-        elif index < len(b) and b[index] < max_val:
-            exp_arr = [x - 1 if x == max_val else x for x in exp_arr]
-            continue
-        elif index < len(b) and b[index] == max_val:
-            indices = [i for i in range(len(a)) if exp_arr[i] == max_val]
-            for i in indices:
-                a[i] += 2**(max_val-1)
-            exp_arr = [get_exponent(a[i]) for i in range(len(a))]
-            max_val = max(exp_arr)
+def modify_arr(a, q):
+    min_val = q[0]
+    q0 = [min_val]
+    for i in range(1,len(q)):
+        if q[i]<min_val:
+            min_val = q[i]
+            q0.append(min_val)
+    for x in q0:
+        for i in range(len(a)):
+            if(a[i]%(2**x) == 0):
+                a[i] += 2**(x-1)
 
     return a
 
@@ -64,4 +42,6 @@ def main():
     sys.stdout.write("\n".join(out) + "\n")
 
 if __name__ == "__main__":
-    main()
+    a = [1,2,3,4,4]
+    b = [2,3,4]
+    print(modify_arr(a,b))

@@ -1,0 +1,9 @@
+the algo will be a simple brue force algoritm:
+we store the numbers of T,I and L initially in the string in array and set the maximum numeber of possible insertions to 2*len(string)
+then we iterate form index 1 to n-2 in the array checking whether the current and the next index is unequal or not
+if not we put letter that is not there and increment it in the array that we created... and check whether the number of all the elements
+becomes equal if not we move to the next letter which is now the newly inserted letter and check if insertion is possible or not
+if not then move to the next else insert and check the counter array after incrementing the val of the inserted letter and whether all 
+of then become equal or not... go on doing this for 2n possible moves...
+if at any stage the desired is achieved then return the number of moves done 
+else return -1

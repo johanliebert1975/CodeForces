@@ -1,0 +1,12 @@
+say we are given an array of numbers and we add some number d to all the numbers such that
+later we need to select two numbers from the array such that the gcd of the two numbers should be
+maximum of all the possible selections
+
+now it can be shown that for any two numbers a and b where a < b the max possible value of 
+gcd(a,b) = a and if for any two numbers in the array if we were to maximise the gcd between them for 
+any two numbers... we would need to add such a number so that they become the multiples of the difference
+between them
+
+and hence the gcd will be then equal to their difference after the addition...
+so to maximise the gcd... for all possible selections we need to have the difference between the min and max of the given integer
+array

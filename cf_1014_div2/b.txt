@@ -1,0 +1,9 @@
+one possible algorithm for this situtaion is that
+say you have... an two arrays of zeroes and ones...
+
+and the ones in the odd positions in a will be only swapped by zeroes in the even poistions of b 
+and the ones in the even poistions of a will be swapped only by odd positioned zeroes in b 
+
+so a good guess would be that the if the number of zeroes in the odd postion in b is greater than equal to the 
+number of ones in the even positions of a and also the vice versa for even and odd for a anb then the given code is crackable
+and we return yes else we return No
