@@ -1,14 +1,22 @@
 import sys
 
 def calc_y(x):
-    i = 2
-    while(i<x):
-        if(x&i == 0):
-            continue
-        elif(i + (x^i)>x):
-            return i
-        i = i**2 
-    return -1
+    if x == 0:  # Edge case: No bits set
+        return -1
+
+    msb_pos = x.bit_length() - 1  # Position of the MSB (leftmost 1-bit)
+
+    # Check if all bits are 1 (i.e., x is of the form 111...111₂)
+    if x == (1 << (msb_pos + 1)) - 1:
+        return -1
+
+    # Check if there exists another '1' bit after MSB
+    if x & ((1 << msb_pos) - 1) == 0:
+        return -1  # No other 1-bit found
+
+    # Construct the result: Set all bits below MSB to 1
+    return (1 << msb_pos) - 1
+
 
 def main():
     input = sys.stdin.read
