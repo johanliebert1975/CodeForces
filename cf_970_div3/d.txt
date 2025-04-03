@@ -1,0 +1,17 @@
+the algo that i have thought is that 
+we create an empty 2D array and then we iterate through the elements in the given array,
+we access the element in the current index we are getting and get appending the elements to the 
+first list in the first 2D array till we repeat on to the same element we started on...
+also while going through this loop we keep a track of the black numbers we have encountered
+and append it to another array...
+now the problem comes when we try to keep a track of the elements which we have already covered...
+we need to solve this somehow once this has been solved... we can append the remaining elements 
+forming the cyclic group to the 2D array accordingly, and also the num of black elements for that
+
+We solve the problem using sets() we check that the number we land on is in the set or not
+if its already there we break the loop or else move onto the next element
+
+after this is complete we iterate through the elements in the 2D array and in a new array set 
+the val of new_arr[2D_array[i][j]] = black_num[i]
+
+and return this array... thus solving our question
