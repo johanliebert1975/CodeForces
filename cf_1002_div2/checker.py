@@ -3,7 +3,7 @@ import subprocess
 # Filenames
 input_file = "input.txt"
 expected_output_file = "output.txt"
-program_file = "e.py"  # Change this to the filename of your solution
+program_file = "b.py"  # Change this to the filename of your solution
 
 # Run the program with input.txt as stdin
 with open(input_file, "r") as inp, subprocess.Popen(
